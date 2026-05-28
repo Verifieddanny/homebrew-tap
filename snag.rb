@@ -10,9 +10,7 @@ class Snag < Formula
   depends_on "ffmpeg"
 
   def install
-    cd "snag-cli" do
-      system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/snag/"
-    end
+    system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/snag/"
   end
 
   test do
