@@ -5,20 +5,20 @@
 class Burnguard < Formula
   desc "Stop surprise AI API bills before they happen"
   homepage "https://burnguard.run"
-  version "0.1.3"
+  version "0.1.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Verifieddanny/BurnGuard/releases/download/v0.1.3/burnguard_darwin_amd64.tar.gz"
-      sha256 "aa75f58ab3986f7b20eaf97ee2a48e1137c46457c20d64392162b5b62eff1c95"
+      url "https://github.com/Verifieddanny/BurnGuard/releases/download/v0.1.4/burnguard_darwin_amd64.tar.gz"
+      sha256 "748e4c9e1d50870851b227a1ca29a5f71fbfd162f93ec18adfa4cab98b00367d"
 
       define_method(:install) do
         bin.install "burnguard"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Verifieddanny/BurnGuard/releases/download/v0.1.3/burnguard_darwin_arm64.tar.gz"
-      sha256 "44ba8f38133714c2469d6c36c8373a061610df1dda6bd790d91c01956e4e9a09"
+      url "https://github.com/Verifieddanny/BurnGuard/releases/download/v0.1.4/burnguard_darwin_arm64.tar.gz"
+      sha256 "211158c7a6aa9a8561b1d5ef01ab1387695aaa2f9fe2784bd6f60ffa9dec8411"
 
       define_method(:install) do
         bin.install "burnguard"
@@ -28,15 +28,15 @@ class Burnguard < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Verifieddanny/BurnGuard/releases/download/v0.1.3/burnguard_linux_amd64.tar.gz"
-      sha256 "aab58728ae2495b92a12087ccdca60ab2485530b5fdd82be766c67f807deca10"
+      url "https://github.com/Verifieddanny/BurnGuard/releases/download/v0.1.4/burnguard_linux_amd64.tar.gz"
+      sha256 "eadf4b790159e419412e90ed430cc3ccffe357ea785678d9700e89beab493d9f"
       define_method(:install) do
         bin.install "burnguard"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Verifieddanny/BurnGuard/releases/download/v0.1.3/burnguard_linux_arm64.tar.gz"
-      sha256 "d8b73ae86a1a1762c2e840d3a174cccdd05478b4d4f407bfb6587c28c2f38de8"
+      url "https://github.com/Verifieddanny/BurnGuard/releases/download/v0.1.4/burnguard_linux_arm64.tar.gz"
+      sha256 "69fcbc02c1bfe89b2527a9c06fb1dfdfbb9ab316be362ce40530ee89039f6b50"
       define_method(:install) do
         bin.install "burnguard"
       end
